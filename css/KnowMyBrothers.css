@@ -1,0 +1,19 @@
+body{
+  background-color: blue;
+}
+
+.HGP{
+   text-align: center;
+}
+
+.MyBrothers{
+  text-align: center;
+}
+
+li{
+  list-style: none;
+}
+
+ul{
+  padding: 0;
+}
