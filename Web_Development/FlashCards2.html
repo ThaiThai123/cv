@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Flash Cards</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/FlashCards.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <nav>
+    <div class="topnav">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Portfolio.html">About me</a></li>
+        <li><a href="KnowMyBrothers.html">Know My Brothers</a></li>
+        <li><a href="Reflection.html">Reflection</a></li>
+        <li><a href="Contact.html">Contact Me</a></li>
+        <li><a href="DiceGame.html">Dice Game</a></li>
+        <li><a href="DrumKit.html">Drum Kit</a></li>
+        <li><a href="SimonSays.html">Simon Says</a></li>
+        <li><a href="Terms.html">Terms Page</a></li>
+        <li><a href="FlashCards2.html">Flash Card game</a></li>
+        <li><a href="FlashCards.html">Community Norms Flash Card game</a></li>
+      </ul>
+    </div>
+  </nav>
+</head>
+
+<body>
+  <div class="flip-container" data-isfront='true' id='card1'>
+    <div class="flipper">
+      <div class="front">
+        <footer>
+          Computer Science
+        </footer>
+      </div>
+      <div class="back">
+        <!-- back content -->
+        <div class="defintion">
+          is the study of computers and computational systems
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-container" data-isfront='true' id='card2'>
+    <div class="flipper">
+      <div class="front">
+        <footer>
+          Computers
+        </footer>
+      </div>
+      <div class="back">
+        <!-- back content -->
+        <div class="defintion">
+          An electronic device for storing and processing data
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-container" data-isfront='true' id='card3'>
+    <div class="flipper">
+      <div class="front">
+        <footer>
+          Problem Solving
+        </footer>
+      </div>
+      <div class="back">
+        <!-- back content -->
+        <div class="defintion">
+          the process of finding solutions to difficult or complex issues
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-container" data-isfront='true' id='card4'>
+    <div class="flipper">
+      <div class="front">
+        <footer>
+          Critical Thinking
+        </footer>
+      </div>
+      <div class="back">
+        <!-- back content -->
+        <div class="defintion">
+          the objective analysis and evaluation of an issue in order to form a judgment
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-container" data-isfront='true' id='card5'>
+    <div class="flipper">
+      <div class="front">
+        <footer>
+          Logical Thinking
+        </footer>
+      </div>
+      <div class="back">
+        <!-- back content -->
+        <div class="defintion">
+          is the process in which one uses reasoning consistently to come to a conclusion.
+        </div>
+      </div>
+    </div>
+  </div>
+  <button onclick='words()'>Words</button>
+  <button onclick='defintions()'>Defintions</button>
+  <script src="js/FlashCards.js" charset="utf-8"></script>
+
+</body>
+
+</html>
