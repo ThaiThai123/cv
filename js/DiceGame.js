@@ -3,18 +3,16 @@ var randomNumber1 = Math.floor(Math.random() * 6) + 1; //1-6
 
 var randomDiceImage = "dice" + randomNumber1 + ".png"; //dice1.png - dice6.png
 
-var randomImageSource = "../Web_Development/DiceGame_images/" + randomDiceImage; //images/dice1.png - images/dice6.png
+var randomImageSource1 = "file:///Users/hgpmac169/Desktop/Web_Development/DiceGame_Images/" + randomDiceImage; //images/dice1.png - images/dice6.png
 
-var image1 = document.querySelectorAll("img")[0];
 
-image1.setAttribute("src", randomImageSource);
-
+document.getElementsByClassName("dice-img")[0].setAttribute("src", randomImageSource1);
 
 var randomNumber2 = Math.floor(Math.random() * 6) + 1;
 
-var randomImageSource2 = "../Web_Development/DiceGame_images/dice" + randomNumber2 + ".png";
+var randomImageSource2 = "file:///Users/hgpmac169/Desktop/Web_Development/DiceGame_Images/" + "dice" + randomNumber2 + ".png";
 
-document.querySelectorAll("img")[1].setAttribute("src", randomImageSource2);
+document.getElementsByClassName("dice-img")[1].setAttribute("src", randomImageSource2);
 
 
 //If player 1 wins
