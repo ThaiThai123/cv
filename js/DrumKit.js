@@ -27,42 +27,43 @@ function makeSound(key) {
 
   switch (key) {
     case "w":
-      var tom1 = new Audio("DrumKit_Sounds/tom-1.mp3");
+      var tom1 = new Audio("Sounds/DrumKit_Sounds/tom-1.mp3");
       tom1.play();
       break;
 
     case "a":
-      var tom2 = new Audio("DrumKit_Sounds/tom-2.mp3");
+      var tom2 = new Audio("Sounds/DrumKit_Sounds/tom-2.mp3");
       tom2.play();
       break;
 
     case "s":
-      var tom3 = new Audio('DrumKit_Sounds/tom-3.mp3');
+      var tom3 = new Audio('Sounds/DrumKit_Sounds/tom-3.mp3');
       tom3.play();
       break;
 
     case "d":
-      var tom4 = new Audio('DrumKit_Sounds/tom-4.mp3');
+      var tom4 = new Audio('Sounds/DrumKit_Sounds/tom-4.mp3');
       tom4.play();
       break;
 
     case "j":
-      var snare = new Audio('DrumKit_Sounds/snare.mp3');
+      var snare = new Audio('Sounds/DrumKit_Sounds/snare.mp3');
       snare.play();
       break;
 
     case "k":
-      var crash = new Audio('DrumKit_Sounds/crash.mp3');
+      var crash = new Audio('Sounds/DrumKit_Sounds/crash.mp3');
       crash.play();
       break;
 
     case "l":
-      var kick = new Audio('DrumKit_Sounds/kick-bass.mp3');
+      var kick = new Audio('Sounds/DrumKit_Sounds/kick-bass.mp3');
       kick.play();
       break;
 
 
-    default: console.log(key);
+    default:
+      console.log(key);
 
   }
 }

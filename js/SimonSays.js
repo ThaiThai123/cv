@@ -13,8 +13,8 @@ var tempo;
 
 //Visualization Note
 function colorButton(id, color) {
-    this.id = id;
-    this.color = color;
+  this.id = id;
+  this.color = color;
 }
 var gre = new colorButton(1, "gre");
 var red = new colorButton(2, "red");
@@ -28,8 +28,7 @@ $("#powerSwitch").on("click", function() {
     $("#buttonOff").css("visibility", "hidden");
     $("#displayText").css("opacity", "1");
     power = "on";
-  }
-  else if (power == "on") {
+  } else if (power == "on") {
     $("#buttonOn").css("visibility", "hidden");
     $("#buttonOff").css("visibility", "visible");
     $("#displayText").css("opacity", "0.3");
@@ -58,8 +57,7 @@ $("#strictButton").on("click", function() {
       $("#strictButton").css("background", "green");
       $("#strictButton").addClass("fa fa-check");
       strict = "on";
-    }
-    else if (strict == "on") {
+    } else if (strict == "on") {
       $("#strictButton").css("background", "yellow");
       $("#strictButton").removeClass("fa fa-check");
       strict = "off";
@@ -83,7 +81,9 @@ $("#startButton").on("click", function() {
     $(".fourButton").css("pointer-events", "none");
     newMemory();
     console.log(memoryArray);
-    setTimeout(function() {runMemory = setInterval(playMemory, 1000);}, 1000);
+    setTimeout(function() {
+      runMemory = setInterval(playMemory, 1000);
+    }, 1000);
   }
 });
 
@@ -113,32 +113,33 @@ $("div[id*='button']").on("click", function() {
           levelCount = 1;
           newMemory();
           console.log(memoryArray);
-          setTimeout(function() {runMemory = setInterval(playMemory, tempo);}, 1000);
+          setTimeout(function() {
+            runMemory = setInterval(playMemory, tempo);
+          }, 1000);
+        } else {
+          setTimeout(function() {
+            runMemory = setInterval(playMemory, tempo);
+          }, 1000);
         }
-        else {
-          setTimeout(function() {runMemory = setInterval(playMemory, tempo);}, 1000);
-        }
-      }
-      else {
+      } else {
         if (userArrayCounter == memoryArrayCounter) {
           if (matchingArrays) {
             if (levelCount == 20) {
               win();
-            }
-            else {
+            } else {
               userArray = [];
               memoryArrayCounter = 0;
               userArrayCounter = 0;
               newMemory();
               levelCount++;
 
-              switch(levelCount) {
+              switch (levelCount) {
                 case 1:
                 case 2:
                 case 3:
                 case 4:
                   tempo = 1000;
-                    break;
+                  break;
                 case 5:
                   tempo = 700;
                   break;
@@ -149,7 +150,9 @@ $("div[id*='button']").on("click", function() {
                   tempo = 300;
                   break;
               }
-              setTimeout(function() {runMemory = setInterval(playMemory, tempo);}, 1000);
+              setTimeout(function() {
+                runMemory = setInterval(playMemory, tempo);
+              }, 1000);
               $(".fourButton").css("pointer-events", "none");
             }
           }
@@ -164,7 +167,7 @@ $("div[id*='button']").on("click", function() {
 //colors depending on the color's object.id
 function newMemory() {
   var temp = Math.floor((Math.random() * 4) + 1);
-  switch(temp) {
+  switch (temp) {
     case 1:
       memoryArray.push("Gre");
       break;
@@ -186,7 +189,9 @@ function playMemory() {
   //$("#soundbutton" + tempColor).get(0).play();
   $("#soundbutton" + tempColor).get(0).cloneNode().play();
   $("#button" + tempColor).addClass("activated");
-  setTimeout(function() {$("#button" + tempColor).removeClass("activated");}, 250);
+  setTimeout(function() {
+    $("#button" + tempColor).removeClass("activated");
+  }, 250);
   memoryArrayCounter++;
   if (memoryArrayCounter == memoryArray.length) {
     clearInterval(runMemory);
@@ -197,31 +202,77 @@ function playMemory() {
 function win() {
   $("#displayText").html("WIN");
   $("#buttonGre").addClass("activated");
-  setTimeout(function() {$("#buttonGre").removeClass("activated");}, 250);
-  setTimeout(function() {$("#buttonRed").addClass("activated");}, 250);
-  setTimeout(function() {$("#buttonRed").removeClass("activated");}, 500);
-  setTimeout(function() {$("#buttonYel").addClass("activated");}, 500);
-  setTimeout(function() {$("#buttonYel").removeClass("activated");}, 750);
-  setTimeout(function() {$("#buttonBlu").addClass("activated");}, 750);
-  setTimeout(function() {$("#buttonBlu").removeClass("activated");}, 1000);
+  setTimeout(function() {
+    $("#buttonGre").removeClass("activated");
+  }, 250);
+  setTimeout(function() {
+    $("#buttonRed").addClass("activated");
+  }, 250);
+  setTimeout(function() {
+    $("#buttonRed").removeClass("activated");
+  }, 500);
+  setTimeout(function() {
+    $("#buttonYel").addClass("activated");
+  }, 500);
+  setTimeout(function() {
+    $("#buttonYel").removeClass("activated");
+  }, 750);
+  setTimeout(function() {
+    $("#buttonBlu").addClass("activated");
+  }, 750);
+  setTimeout(function() {
+    $("#buttonBlu").removeClass("activated");
+  }, 1000);
 
-  setTimeout(function() {$("#buttonGre").addClass("activated");}, 1250);
-  setTimeout(function() {$("#buttonRed").addClass("activated");}, 1250);
-  setTimeout(function() {$("#buttonYel").addClass("activated");}, 1250);
-  setTimeout(function() {$("#buttonBlu").addClass("activated");}, 1250);
-  setTimeout(function() {$("#buttonGre").removeClass("activated");}, 1500);
-  setTimeout(function() {$("#buttonRed").removeClass("activated");}, 1500);
-  setTimeout(function() {$("#buttonYel").removeClass("activated");}, 1500);
-  setTimeout(function() {$("#buttonBlu").removeClass("activated");}, 1500);
+  setTimeout(function() {
+    $("#buttonGre").addClass("activated");
+  }, 1250);
+  setTimeout(function() {
+    $("#buttonRed").addClass("activated");
+  }, 1250);
+  setTimeout(function() {
+    $("#buttonYel").addClass("activated");
+  }, 1250);
+  setTimeout(function() {
+    $("#buttonBlu").addClass("activated");
+  }, 1250);
+  setTimeout(function() {
+    $("#buttonGre").removeClass("activated");
+  }, 1500);
+  setTimeout(function() {
+    $("#buttonRed").removeClass("activated");
+  }, 1500);
+  setTimeout(function() {
+    $("#buttonYel").removeClass("activated");
+  }, 1500);
+  setTimeout(function() {
+    $("#buttonBlu").removeClass("activated");
+  }, 1500);
 
-  setTimeout(function() {$("#buttonGre").addClass("activated");}, 1750);
-  setTimeout(function() {$("#buttonRed").addClass("activated");}, 1750);
-  setTimeout(function() {$("#buttonYel").addClass("activated");}, 1750);
-  setTimeout(function() {$("#buttonBlu").addClass("activated");}, 1750);
-  setTimeout(function() {$("#buttonGre").removeClass("activated");}, 2000);
-  setTimeout(function() {$("#buttonRed").removeClass("activated");}, 2000);
-  setTimeout(function() {$("#buttonYel").removeClass("activated");}, 2000);
-  setTimeout(function() {$("#buttonBlu").removeClass("activated");}, 2000);
+  setTimeout(function() {
+    $("#buttonGre").addClass("activated");
+  }, 1750);
+  setTimeout(function() {
+    $("#buttonRed").addClass("activated");
+  }, 1750);
+  setTimeout(function() {
+    $("#buttonYel").addClass("activated");
+  }, 1750);
+  setTimeout(function() {
+    $("#buttonBlu").addClass("activated");
+  }, 1750);
+  setTimeout(function() {
+    $("#buttonGre").removeClass("activated");
+  }, 2000);
+  setTimeout(function() {
+    $("#buttonRed").removeClass("activated");
+  }, 2000);
+  setTimeout(function() {
+    $("#buttonYel").removeClass("activated");
+  }, 2000);
+  setTimeout(function() {
+    $("#buttonBlu").removeClass("activated");
+  }, 2000);
 
   setTimeout(function() {
     userArray = [];
@@ -235,7 +286,8 @@ function win() {
     $(".fourButton").css("pointer-events", "none");
     newMemory();
     console.log(memoryArray);
-    setTimeout(function() {runMemory = setInterval(playMemory, 1000);}, 1000);
+    setTimeout(function() {
+      runMemory = setInterval(playMemory, 1000);
+    }, 1000);
   }, 3000);
 }
-  

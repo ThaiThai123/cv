@@ -1,16 +1,17 @@
-body{
+body {
   background-color: #0000ff;
   text-align: center;
   padding: 0;
 }
 
-li{
+li {
   list-style: none;
 }
-.direct-contact-container{
+
+.direct-contact-container {
   color: #fff;
 }
 
-a{
+a {
   color: white;
 }
